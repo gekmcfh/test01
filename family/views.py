@@ -12,3 +12,4 @@ class ChildListView(ListView):
     model = Child
     template_name = 'child_list.html'
     context_object_name = 'child_objects_list'
+    queryset = Parent.objects.prefetch_related('child')
