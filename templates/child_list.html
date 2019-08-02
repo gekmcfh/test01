@@ -1,0 +1,13 @@
+{% extends 'parent_list.html' %}
+
+{% block title %}Childs_list{% endblock title %}
+
+{% block childs_block %}
+    {% for child in parent.child_set.all %}
+        <div class="card">
+            <div class="card-header">
+                <span class="font-weight-bold">{{ child.title }}</span>
+            </div>
+        </div>
+    {% endfor %}
+{% endblock childs_block %}
