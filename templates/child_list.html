@@ -4,10 +4,6 @@
 
 {% block childs_block %}
     {% for child in parent.child_set.all %}
-        <div class="card">
-            <div class="card-header">
-                <span class="font-weight-bold">{{ child.title }}</span>
-            </div>
-        </div>
+    <p>{{ child }}</p>
     {% endfor %}
 {% endblock childs_block %}

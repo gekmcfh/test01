@@ -4,14 +4,8 @@
 
 {% block content %}
     {% for parent in parent_objects_list %}
-        <div class="card">
-            <div class="card-header">
-                <span class="font-weight-bold">{{ parent.title }}</span>
-            </div>
-            <div class="card-body">
-                {% block childs_block %}
-                {% endblock childs_block %}
-            </div>
-        </div>
+        <p>{{ parent }}</p>
+        {% block childs_block %}
+        {% endblock childs_block %}
     {% endfor %}
 {% endblock content %}
