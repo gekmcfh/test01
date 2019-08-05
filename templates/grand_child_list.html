@@ -1,0 +1,9 @@
+{% extends 'child_list.html' %}
+
+{% block title %}Childs_list{% endblock title %}
+
+{% block childs_block %}
+    {% for child in parent.child_set.all %}
+    <p>{{ child }}</p>
+    {% endfor %}
+{% endblock childs_block %}
